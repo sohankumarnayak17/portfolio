@@ -17,8 +17,8 @@ html {
 :root {
     --bg-color: #080808;
     --second-bg-color: #001005;
-    --text-color: white;
-    --main-color: rgb(65, 189, 65);
+    --text-color: rgb(234, 94, 8);
+    --main-color: rgb(0, 0, 0);
 }
 
 body {

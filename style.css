@@ -51,6 +51,17 @@ body{
     color:var(--main-color);
 }
 
+#menu-icon{
+    font-size:3rem;
+    color:var(--main-color);
+    display:none;
+    cursor:pointer;
+}
+
+.navbar{
+    display:flex;
+}
+
 .navbar a{
     margin-left:4rem;
     font-size:1.6rem;
@@ -94,7 +105,6 @@ section{
     margin-bottom:2rem;
 }
 
-/* HOME IMAGE */
 .home-img img{
     width:320px;
     height:320px;
@@ -102,8 +112,7 @@ section{
     object-fit:cover;
     box-shadow:
         0 0 30px var(--main-color),
-        0 0 60px var(--main-color),
-        0 0 100px var(--main-color);
+        0 0 60px var(--main-color);
     transition:.4s ease;
 }
 
@@ -112,8 +121,7 @@ section{
 }
 
 /* ================= SOCIAL ICONS ================= */
-.social-icons a,
-.about-social a{
+.social-icons a{
     display:inline-flex;
     justify-content:center;
     align-items:center;
@@ -128,15 +136,10 @@ section{
     box-shadow:0 0 10px var(--main-color);
 }
 
-.social-icons a:hover,
-.about-social a:hover{
+.social-icons a:hover{
     background:var(--main-color);
     color:#000;
     transform:translateY(-6px) scale(1.2);
-    box-shadow:
-        0 0 20px var(--main-color),
-        0 0 40px var(--main-color),
-        0 0 60px var(--main-color);
 }
 
 /* ================= ABOUT ================= */
@@ -154,15 +157,6 @@ section{
     object-fit:cover;
     border-radius:1.5rem;
     box-shadow:0 0 25px var(--main-color);
-    transition:0.4s ease-in-out;
-}
-
-.about-img img:hover{
-    transform:scale(1.05);
-    box-shadow:
-        0 0 25px var(--main-color),
-        0 0 50px var(--main-color),
-        0 0 100px var(--main-color);
 }
 
 .about-content h2{
@@ -176,10 +170,6 @@ section{
 .about-content p{
     font-size:1.8rem;
     margin:2rem 0;
-}
-
-.about-content .btn{
-    margin:3rem 0;
 }
 
 /* ================= SERVICES ================= */
@@ -227,8 +217,7 @@ section{
     gap:2rem;
     margin-top:4rem;
     max-width:500px;
-    margin-left:auto;
-    margin-right:auto;
+    margin:auto;
 }
 
 .contact-container input,
@@ -271,25 +260,50 @@ section{
 }
 
 /* ================= RESPONSIVE ================= */
-@media(max-width:991px){
+@media(max-width:1024px){
+
+    #menu-icon{
+        display:block;
+    }
+
+    .navbar{
+        position:absolute;
+        top:100%;
+        right:-100%;
+        width:50%;
+        padding:2rem 3rem;
+        background:rgba(0,0,0,0.95);
+        border-left:2px solid var(--main-color);
+        border-bottom:2px solid var(--main-color);
+        border-bottom-left-radius:2rem;
+        flex-direction:column;
+        transition:0.3s ease;
+    }
+
+    .navbar.active{
+        right:0;
+    }
+
+    .navbar a{
+        display:block;
+        margin:2rem 0;
+        font-size:2rem;
+    }
+
     .home,
     .about{
-        flex-direction:column;
+        flex-direction:column-reverse;
         text-align:center;
+        gap:5rem;
     }
 
     .home-img img{
-        width:250px;
-        height:250px;
+        width:52vw;
+        height:auto;
     }
 
     .about-img img{
-        width:280px;
-        height:380px;
-    }
-
-    .services-container{
-        flex-direction:column;
-        align-items:center;
+        width:52vw;
+        height:auto;
     }
 }

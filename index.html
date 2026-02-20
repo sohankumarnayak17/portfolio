@@ -5,6 +5,8 @@
     <title>Sohan Nayak | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="Sohan Nayak - Passionate Video Editor & Full Stack App Developer.">
+
     <link rel="stylesheet" href="style.css">
 
     <!-- Boxicons -->
@@ -27,28 +29,40 @@
     </nav>
 </header>
 
+<!-- HOME -->
 <section class="home" id="home">
     <div class="home-content">
         <h1>Hi, It's <span>Sohan</span></h1>
 
-        <!-- UPDATED TEXT -->
-        <h3>
-            I'm a <span>Passionate Video Editor</span> and a 
-            <span>Full Stack App Developer</span>
+        <h3 class="profession">
+            I'm a <span>Passionate Video Editor</span><br>
+            & <span>Full Stack App Developer</span>
         </h3>
 
         <p>
             Creating cinematic videos and building powerful, scalable applications.
         </p>
 
+        <!-- UPDATED SOCIAL ICONS -->
         <div class="social-icons">
-            <a href="#"><i class="bx bxl-github"></i></a>
-            <a href="#"><i class="bx bxl-linkedin"></i></a>
-            <a href="#"><i class="bx bxl-instagram"></i></a>
-            <a href="#"><i class="bx bx-envelope"></i></a>
+            <a href="https://github.com/YOURUSERNAME" target="_blank">
+                <i class="bx bxl-github"></i>
+            </a>
+
+            <a href="https://linkedin.com/in/YOURUSERNAME" target="_blank">
+                <i class="bx bxl-linkedin"></i>
+            </a>
+
+            <a href="https://instagram.com/YOURUSERNAME" target="_blank">
+                <i class="bx bxl-instagram"></i>
+            </a>
+
+            <a href="mailto:youremail@gmail.com">
+                <i class="bx bx-envelope"></i>
+            </a>
         </div>
 
-        <a href="#contact" class="btn">Contact Me</a>
+        <a href="resume.pdf" download class="btn">Download CV</a>
     </div>
 
     <div class="home-img">
@@ -56,54 +70,22 @@
     </div>
 </section>
 
-<section class="about" id="about">
-    <div class="about-img">
-        <img src="profile.jpeg" alt="About Image">
-    </div>
-
-    <div class="about-content">
-        <h2>About <span>Me</span></h2>
-        <p>
-            I am a passionate Video Editor and Full Stack App Developer focused on 
-            cinematic storytelling and building high-performance applications.
-        </p>
-        <a href="#" class="btn">Download CV</a>
-    </div>
-</section>
-
-<section class="services" id="services">
-    <h2 class="section-title">My <span>Services</span></h2>
-
-    <div class="services-container">
-        <div class="service-box">
-            <i class="bx bx-video"></i>
-            <h3>Video Editing</h3>
-            <p>Professional editing for cinematic and social media content.</p>
-        </div>
-
-        <div class="service-box">
-            <i class="bx bx-code-alt"></i>
-            <h3>App Development</h3>
-            <p>Modern and scalable full stack applications.</p>
-        </div>
-
-        <div class="service-box">
-            <i class="bx bx-movie-play"></i>
-            <h3>Creative Production</h3>
-            <p>Visual storytelling with smooth transitions and effects.</p>
-        </div>
-    </div>
-</section>
-
+<!-- CONTACT -->
 <section class="contact" id="contact">
     <h2 class="section-title">Contact <span>Me</span></h2>
 
-    <div class="contact-container">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button class="btn">Send Message</button>
-    </div>
+    <form action="https://formsubmit.co/youremail@gmail.com" method="POST" class="contact-container">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
 </section>
 
 <script src="script.js"></script>

@@ -31,7 +31,6 @@
     <div class="home-content">
         <h1>Hi, It's <span>Sohan</span></h1>
 
-        <!-- UPDATED TEXT -->
         <h3>
             I'm a <span>Passionate Video Editor</span> and a 
             <span>Full Stack App Developer</span>
@@ -41,11 +40,23 @@
             Creating cinematic videos and building powerful, scalable applications.
         </p>
 
+        <!-- SOCIAL MEDIA REDIRECT -->
         <div class="social-icons">
-            <a href="#"><i class="bx bxl-github"></i></a>
-            <a href="#"><i class="bx bxl-linkedin"></i></a>
-            <a href="#"><i class="bx bxl-instagram"></i></a>
-            <a href="#"><i class="bx bx-envelope"></i></a>
+            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">
+                <i class="bx bxl-github"></i>
+            </a>
+
+            <a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank">
+                <i class="bx bxl-linkedin"></i>
+            </a>
+
+            <a href="https://instagram.com/YOUR_INSTAGRAM_USERNAME" target="_blank">
+                <i class="bx bxl-instagram"></i>
+            </a>
+
+            <a href="mailto:yourmail@gmail.com">
+                <i class="bx bx-envelope"></i>
+            </a>
         </div>
 
         <a href="#contact" class="btn">Contact Me</a>
@@ -67,7 +78,9 @@
             I am a passionate Video Editor and Full Stack App Developer focused on 
             cinematic storytelling and building high-performance applications.
         </p>
-        <a href="#" class="btn">Download CV</a>
+
+        <!-- AUTO DOWNLOAD RESUME -->
+        <a href="resume.pdf" download class="btn">Download CV</a>
     </div>
 </section>
 
@@ -95,15 +108,22 @@
     </div>
 </section>
 
+<!-- CONTACT SECTION UPDATED TO SEND EMAIL -->
 <section class="contact" id="contact">
     <h2 class="section-title">Contact <span>Me</span></h2>
 
-    <div class="contact-container">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button class="btn">Send Message</button>
-    </div>
+    <form action="https://formsubmit.co/yourmail@gmail.com" method="POST" class="contact-container">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <!-- Disable captcha -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <button type="submit" class="btn">Send Message</button>
+
+    </form>
 </section>
 
 <script src="script.js"></script>

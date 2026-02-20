@@ -18,7 +18,7 @@ html{
     --bg-color:#080808;
     --second-bg-color:#001005;
     --text-color:#ffffff;
-    --main-color:#41bd41;
+    --main-color:rgb(65,189,65);
 }
 
 body{
@@ -26,7 +26,7 @@ body{
     color:var(--text-color);
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 .header{
     position:fixed;
     width:100%;
@@ -34,7 +34,7 @@ body{
     left:0;
     padding:2rem 12%;
     background:rgba(0,0,0,0.6);
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -72,13 +72,13 @@ body{
     color:var(--main-color);
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 section{
     min-height:100vh;
     padding:10rem 12%;
 }
 
-/* HOME */
+/* ================= HOME ================= */
 .home{
     display:flex;
     align-items:center;
@@ -87,16 +87,19 @@ section{
 }
 
 .home-content h1{
-    font-size:5rem;
+    font-size:6rem;
 }
 
-.home-content h3{
-    font-size:2.8rem;
+/* UPDATED PROFESSION STYLE */
+.profession{
+    font-size:3rem;
     margin:1rem 0;
+    line-height:1.4;
 }
 
-.home-content span{
+.profession span{
     color:var(--main-color);
+    font-weight:600;
 }
 
 .home-content p{
@@ -104,20 +107,23 @@ section{
     margin-bottom:2rem;
 }
 
+/* HOME IMAGE */
 .home-img img{
-    width:300px;
-    height:300px;
+    width:320px;
+    height:320px;
     border-radius:50%;
     object-fit:cover;
-    box-shadow:0 0 25px var(--main-color);
-    transition:.3s;
+    box-shadow:
+        0 0 30px var(--main-color),
+        0 0 60px var(--main-color);
+    transition:.4s ease;
 }
 
 .home-img img:hover{
-    transform:scale(1.05);
+    transform:scale(1.07);
 }
 
-/* SOCIAL ICONS */
+/* ================= SOCIAL ICONS ================= */
 .social-icons a{
     display:inline-flex;
     justify-content:center;
@@ -136,7 +142,7 @@ section{
     color:#000;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 .about{
     display:flex;
     align-items:center;
@@ -146,7 +152,7 @@ section{
 }
 
 .about-img img{
-    width:280px;
+    width:300px;
     border-radius:1rem;
 }
 
@@ -163,7 +169,7 @@ section{
     margin:2rem 0;
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 .section-title{
     font-size:4rem;
     text-align:center;
@@ -192,6 +198,7 @@ section{
 
 .service-box:hover{
     transform:translateY(-10px);
+    box-shadow:0 0 20px var(--main-color);
 }
 
 .service-box i{
@@ -199,7 +206,7 @@ section{
     color:var(--main-color);
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 .contact-container{
     display:flex;
     flex-direction:column;
@@ -216,7 +223,7 @@ section{
     border-radius:.5rem;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
 .btn{
     display:inline-block;
     padding:1rem 2.5rem;
@@ -232,7 +239,7 @@ section{
     box-shadow:0 0 15px var(--main-color);
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media(max-width:768px){
 
     #menu-icon{
@@ -267,5 +274,9 @@ section{
     .home-img img{
         width:220px;
         height:220px;
+    }
+
+    .profession{
+        font-size:2.2rem;
     }
 }
